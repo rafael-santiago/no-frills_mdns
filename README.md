@@ -1,6 +1,6 @@
 # MELEIAMEEU...
 
-Isso aqui é um implementação simples, não inflada e sem frescura de um servidor minimalista
+Isso aqui é uma implementação simples, não inflada e sem frescura de um servidor minimalista
 de `MDNS`. Fiz essa implementação para um projeto embarcado de final de semana, para facilitar
 os trecos de `zero conf` que precisava para continuar com minhas loucuras. Porém, não queria
 vender a minha alma usando um `zero conf` onde trouxesse para o projeto fadas, duendes,
