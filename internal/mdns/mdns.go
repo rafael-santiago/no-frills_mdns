@@ -335,15 +335,16 @@ func doMDNSServerRunN(proto, listenAddr string,
     if err != nil {
         return err
     }
-    l.SetReadBuffer(128)
+    l.SetReadBuffer(0xFFFF)
     for {
         select {
             case <-goinHome:
                 break
             default:
         }
-        b := make([]byte, 128)
+        b := make([]byte, 0xFFFF)
         l.SetReadDeadline(time.Now().Add(3 * time.Second))
+        l.SetDeadline(time.Now().Add(3 * time.Second))
         bytesTotal, unicastAddr, err := l.ReadFromUDP(b)
         if bytesTotal <= 0 {
             continue
